@@ -23,4 +23,6 @@ ingredients = db_connection  do |conn|
   conn.exec(select_ingredients)
 end
 
-puts ingredients.to_a  
+ingredients.to_a.each do |ingredient|
+  puts "#{ingredient["step"]}. #{ingredient["name"]}"
+end 
